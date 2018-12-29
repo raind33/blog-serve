@@ -1,0 +1,22 @@
+{
+  "name": "blog-serve",
+  "version": "1.0.0",
+  "description": "koa2开发博客后台",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raind33/blog-serve.git"
+  },
+  "author": "rain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raind33/blog-serve/issues"
+  },
+  "homepage": "https://github.com/raind33/blog-serve#readme",
+  "dependencies": {
+    "koa": "^2.6.2"
+  }
+}
