@@ -9,9 +9,15 @@ const MONGODB = {
 	username: argv.db_username || 'DB_username',
 	password: argv.db_password || 'DB_password'
 }
+const USER = {
+  jwtTokenSecret: argv.auth_key || 'vue_blog',
+  defaultUsername: argv.auth_default_username || 'rain',
+	defaultPassword: argv.auth_default_password || '123456'
+}
 
 module.exports = {
   MONGODB,
-  APP
+  APP,
+  USER
 }
 

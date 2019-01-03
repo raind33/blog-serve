@@ -1,12 +1,10 @@
 const Router = require('koa-router')
 const config = require('../config')
+const controller = require('../controller')
+
 const router = new Router({
   prefix: config.APP.ROOT_PATH
 })
-router.post('/login', (ctx, next) => {
-  ctx.response.body = {
-    'test':'ewwe'
-  }
-})
-
+router.post('/login', controller.auth.login)
+router.get('/auth', controller.auth.getAuth)
 module.exports = router

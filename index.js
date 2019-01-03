@@ -1,12 +1,18 @@
 const config = require('./config')
 const Koa = require('koa')
+const KoaBody = require('koa-body')
 const app = new Koa()
 const router = require('./route')
 const mongoose = require('./mongodb')
 const interceptor = require('./middlewares/intercpters')
+const authVerify = require('./middlewares/authVerify')
+const initAdmin = require('./middlewares/initAdmin')
 mongoose.connect()
 
+app.use(KoaBody())
 app.use(interceptor)
+app.use(initAdmin)
+app.use(authVerify)
 app
   .use(router.routes())
   .use(router.allowedMethods()) 
