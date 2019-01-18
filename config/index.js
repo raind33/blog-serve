@@ -1,7 +1,7 @@
 const argv = require('yargs').argv
 
 const APP = {
-  PORT: 3999,
+  PORT: 8000,
   ROOT_PATH:'/api'
 }
 const MONGODB = {

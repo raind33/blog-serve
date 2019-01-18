@@ -10,9 +10,9 @@ const initAdmin = require('./middlewares/initAdmin')
 mongoose.connect()
 
 app.use(KoaBody())
-app.use(interceptor)
-app.use(initAdmin)
-app.use(authVerify)
+// app.use(interceptor)
+// app.use(initAdmin)
+// app.use(authVerify)
 app
   .use(router.routes())
   .use(router.allowedMethods()) 

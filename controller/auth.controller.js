@@ -48,6 +48,15 @@ const md5Decode = pwd => {
       handleSuccess({ ctx, result: user, message: '获取用户资料成功'})    
     } else handleError({ ctx, message: "获取用户资料失败" })
    }
+
+   static async test(ctx) {
+     ctx.body = {
+       code:0,
+       result:{
+         list:[1,2,4]
+       }
+     }
+   }
  }
 
  module.exports = AuthController
